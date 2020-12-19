@@ -1,0 +1,54 @@
+package br.com.javamagazine;
+
+  import javax.swing.JOptionPane;
+
+  class Vendas implements InterfaceVendas {
+
+    public String nomeCliente;
+    protected String descProduto;
+    private double valor = 50;
+
+    public double alteraValor(double valor){
+      this.valor = valor;
+      return valor;
+    }
+
+    public void imprimeValor(double valor){
+      if (valor > 100)
+        JOptionPane.showMessageDialog(null,"Valor acima do permitido");
+      else
+        JOptionPane.showMessageDialog(null,"Valor="+valor);
+    }
+
+  }
+  /*
+ * Procure sempre comentar no início do arquivo fonte colocando informações como
+ * Nome da Classe, Data da Criação
+ * Todos os direitos reservados para Nome da Empresa e o endereço desta completo
+ * Outras informações que achar necessário.
+ * Se você não for gerar documentação ou se um comentário não é adequado para isso,
+ * também pode colocá-lo aqui
+ */
+
+package br.com.devmedia;
+
+import javax.swing.JOptionPane;
+
+/**
+ * A informação que você colocar aqui irá para a documentação gerada através do javadoc.
+ * @version 1.0
+ * @author Neri Aldoir Neitzke – Universidade Ulbra
+ */
+
+public class CalcMedia {
+  public static void main(String args[]){
+    float nota1, nota2, media;
+    nota1 = 5;
+    nota2 = 7;
+    media = (nota1 + nota2) / 2; //calcula a media do aluno
+    if (media >= 6)
+      JOptionPane.showMessageDialog(null,"Aprovado com média " + media);
+    else
+      JOptionPane.showMessageDialog(null,"Reprovado com média " + media);
+  }
+}
